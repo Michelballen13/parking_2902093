@@ -25,12 +25,15 @@ public class Main {
         //3. asignacion y new 
         //4. constructor del obejto
         Vehiculo carrito1 = new Vehiculo ("ASD 789", TipoVehiculo.PARTICULAR);
-        carrito1.placa = "ASD 789";
-        carrito1.tipoVehiculo = TipoVehiculo .PARTICULAR;
+        carrito1.setPlaca("ASD 789"); 
+        carrito1.setTipoVehiculo("PARTICULAR");
 
         Vehiculo carrito2 = new Vehiculo ("ASF 321", TipoVehiculo.MOTO); 
-        carrito2.placa = "ASF 321";
-        carrito2.tipoVehiculo = TipoVehiculo .MOTO;
+        carrito2.setPlaca("WES 212");
+        carrito2.setTipoVehiculo("MOTO");
+
+        Vehiculo motico = new Vehiculo();
+        motico.setPlaca("SD 213"); 
 
     //crear(instanciar) un cliente
     Cliente cliente1 = new Cliente();
@@ -95,12 +98,13 @@ public class Main {
 //  -fecha y hora de inicio
 //  -fecha y hora de fin 
 //  -cupo (nombre)
-System.out.println("|Placa:" + p.vehiculo.placa  + "|");
-System.out.println("|valor:" + p.valor + "|");
-System.out.println("|fecha y hora entrada:" + p.fechaHoraInicio.toString() + "|");
-System.out.println("|fecha y hora fin:" + p.fechaHoraFin.toString() + "|");
-System.out.println("|cupo:" + p.cupo.nombre + "|");
-System.out.println("|empleado" + p.empleado.codigo + "|");
+
+System.out.println("pago:|Placa:" + p.getVehiculo() + "|" + 
+ "|valor:" + p.getValor() + "|" +
+ "|fecha y hora entrada:" +
+ p.getFechaHoraInicio().toString() + "|" +
+"|cupo:" + p.getCupo().getNombre() + "|" );
+
     }
  
     }
